@@ -31,6 +31,8 @@ body{
     position:relative;
     width:170px;
     height:170px;
+    transform-origin:top center;
+    animation:swing 3s ease-in-out infinite;
 }
 
 .bell-top{
@@ -67,5 +69,77 @@ body{
     border-radius:50%;
 }
 
+.bell-ball{
+    position:absolute;
+    bottom:8px;
+    left:50%;
+    transform:translateX(-50%);
+    width:22px;
+    height: 22px;
+    background:#777;
+    border: 2px solid #666;
+    border-radius: 50%;
+}
+button{
+    margin-top:30px;
+    padding:12px 30px;
+    border:none;
+    border-radius:10px;
+    background:#444;
+    color:white;
+    cursor:pointer;
+    font-size:18px;
+
+    transition:.3s;
+    
+}
+
+button:hover{
+    background:#ffffff;
+    color:#111;
+    transform:translateY(-5px);
+
+    box-shadow:
+    0 0 15px white,
+    0 0 30px white;
+}
+
+.shadow{
+
+    margin-top:40px;
+
+    width:160px;
+    height:25px;
+
+    background:rgba(255,255,255,.15);
+
+    filter:blur(12px);
+
+    border-radius:50%;
+
+    animation:shadowMove 3s ease-in-out infinite;
+}
+
+@keyframes swing{
+    0%{
+        transform:rotate(0deg);
+    }
+    20%{
+        transform:rotate(12deg);
+    }
+    40%{
+        transform:rotate(-12deg);
+    }
+    60%{
+        transform:rotate(8deg);
+    }
+     80%{
+        transform:rotate(-8deg);
+    }
+    100%{
+        transform:rotate(0deg);
+    }
+
+}
 
 
